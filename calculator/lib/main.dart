@@ -15,22 +15,28 @@ class AppCalculator extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const Calculator(title: 'Calculator'),
+      home: const MyHomePage(title: 'Calculator'),
     );
   }
 }
 
-class Calculator extends StatefulWidget {
-  const Calculator({super.key, required this.title});
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
   final String title;
 
   @override
-  State<Calculator> createState() => _CalculatorState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _CalculatorState extends State<Calculator> {
+class _MyHomePageState extends State<MyHomePage> {
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+    );
   }
 }
