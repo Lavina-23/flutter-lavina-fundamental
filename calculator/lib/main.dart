@@ -13,7 +13,7 @@ class AppCalculator extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Calculator',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.blueGrey,
       ),
       home: const Claculator(title: 'Calculator'),
     );
@@ -96,20 +96,21 @@ class _ClaculatorState extends State<Claculator> {
                 keyboardType: TextInputType.number,
               ),
               Center(
-                child: Column(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     ElevatedButton(onPressed: () {
                       add();
-                    }, child: Text("ADD"), style: TextButton.styleFrom(backgroundColor: Color.fromARGB(255, 18, 2, 75))),
+                    }, child: Text("ADD"), style: TextButton.styleFrom(backgroundColor: Colors.blueGrey)),
                     ElevatedButton(onPressed: () {
                       sub();
-                    }, child: Text("SUBSTRACT"), style: TextButton.styleFrom(backgroundColor: Color.fromARGB(255, 18, 2, 75))),
+                    }, child: Text("SUBSTRACT"), style: TextButton.styleFrom(backgroundColor: Colors.blueGrey)),
                     ElevatedButton(onPressed: () {
                       mul();
-                    }, child: Text("MULTIPLY"), style: TextButton.styleFrom(backgroundColor: Color.fromARGB(255, 18, 2, 75))),
+                    }, child: Text("MULTIPLY"), style: TextButton.styleFrom(backgroundColor: Colors.blueGrey)),
                     ElevatedButton(onPressed: () {
                       div();
-                    }, child: Text("DIVIDE"), style: TextButton.styleFrom(backgroundColor: Color.fromARGB(255, 18, 2, 75))),
+                    }, child: Text("DIVIDE"), style: TextButton.styleFrom(backgroundColor: Colors.blueGrey)),
                   ],
                 ),
               ),
